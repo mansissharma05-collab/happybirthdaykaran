@@ -1,44 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Page</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
 
-  <div class="container">
-    <h1 class="title">Music For You 🎶</h1>
-    <p class="subtitle">
-      A few songs that remind me of you — and the vibe.
-    </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <div class="music-page">
-      <div class="music-box">
-        <h3>1) Song Title</h3>
-        <p>Write why this song reminds you of him.</p>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="brand-text">Birthday Surprise</span>
       </div>
+      <nav class="nav">
+        <a href="./index.html">Game</a>
+        <a href="./letter.html">Letter</a>
+        <a class="active" href="./music.html">Music</a>
+      </nav>
+    </header>
 
-      <div class="music-box">
-        <h3>2) Song Title</h3>
-        <p>Write why this song reminds you of him.</p>
-      </div>
+    <main>
+      <section class="section">
+        <div class="section-head">
+          <h2>🎶 Music for You</h2>
+          <p class="muted">Here’s the playlist.</p>
+        </div>
 
-      <div class="music-box">
-        <h3>3) Song Title</h3>
-        <p>Write why this song reminds you of him.</p>
-      </div>
+        <div class="music-grid">
+          <div class="music-card">
+            <h3>My song picks</h3>
 
-      <!-- optional playlist button -->
-      <a class="btn" href="https://youtube.com" target="_blank">Open Playlist ▶️</a>
-    </div>
+            <ul class="songs" id="songsList">
+              <li><span class="song">Song 1</span> <span class="note">— love this</span></li>
+              <li><span class="song">Song 2</span> <span class="note">— reminds me of you</span></li>
+              <li><span class="song">Song 3</span> <span class="note">— cute</span></li>
+            </ul>
 
-    <div class="nav">
-      <a class="link" href="letter.html">← Back to Letter</a>
-      <a class="link" href="index.html">Back to Home</a>
-    </div>
-  </div>
+            <div class="row" style="margin-top:14px">
+              <a class="btn primary" href="https://www.youtube.com" target="_blank" rel="noreferrer">Open playlist</a>
+              <button class="btn ghost" id="shuffleBtn" type="button">Shuffle</button>
+            </div>
 
-</body>
+            <div class="row" style="margin-top:14px">
+              <a class="btn ghost" href="./letter.html">Back to letter</a>
+              <a class="btn ghost" href="./index.html">Back to game</a>
+            </div>
+          </div>
+
+          <div class="music-card">
+            <h3>Note</h3>
+            <p class="muted">Happy birthday. Now listen and think of me 😌</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="muted">Made by Mansi • Happy Birthday 🎂</p>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
 </html>

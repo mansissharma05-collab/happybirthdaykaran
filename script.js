@@ -1,12 +1,12 @@
-/* One-page Birthday Rage Game — FINAL WORKING
+/* One-page Birthday Rage Game — FINAL (5 attempts)
    Matches your index.html IDs exactly:
    buttonGrid, toast, attempts, streak, winrate, tauntText,
    unlockFill, unlockMsg, letterBtn, resetBtn, cheatBtn, lockedOverlay
 */
 
-const HIS_NAME = "Karan";          // you can change
-const FAILS_TO_UNLOCK = 12;
-const STORAGE_KEY = "birthday_letter_unlocked_v3";
+const HIS_NAME = "Kammo";
+const FAILS_TO_UNLOCK = 5; // ✅ unlock after 5 fails
+const STORAGE_KEY = "birthday_letter_unlocked_v5";
 
 const taunts = [
   "You look confident. That’s adorable.",
@@ -42,7 +42,7 @@ function setUnlocked(v) {
   localStorage.setItem(STORAGE_KEY, v ? "true" : "false");
 }
 
-/* Confetti burst */
+/* Confetti burst 🎉 */
 function confettiBurst() {
   const duration = 1200;
   const end = Date.now() + duration;
@@ -107,12 +107,11 @@ function initGame() {
   const buttonGrid = qs("buttonGrid");
   const lockedOverlay = qs("lockedOverlay");
 
-  // If these don't exist, game won't run
   if (!buttonGrid || !toastEl) return;
 
   let attempts = 0;
   let confidence = 0;
-  let unlocked = isUnlocked();
+  let unlocked = isUnlocked(); // ✅ persists
 
   function setToast(msg, type = "") {
     toastEl.textContent = msg;
@@ -129,6 +128,7 @@ function initGame() {
       : clamp(Math.round((attempts / FAILS_TO_UNLOCK) * 100), 0, 100);
 
     if (unlockFillEl) unlockFillEl.style.width = pct + "%";
+
     if (unlockMsgEl) {
       unlockMsgEl.textContent = unlocked
         ? "Suffering meter: 100% ✅ letter unlocked"
@@ -163,7 +163,7 @@ function initGame() {
     attempts += 1;
     confidence += 1;
 
-    // move buttons 😈
+    // rearrange buttons 😈
     const buttons = Array.from(buttonGrid.querySelectorAll(".game-btn"));
     buttons.sort(() => Math.random() - 0.5);
     buttons.forEach((b) => buttonGrid.appendChild(b));
@@ -180,6 +180,7 @@ function initGame() {
     confidence = 0;
     unlocked = false;
     setUnlocked(false);
+
     setToast("Reset done. Try again, champ.");
     if (tauntEl) tauntEl.textContent = "Back at zero. Still can’t win though.";
     render();
@@ -196,7 +197,6 @@ function initGame() {
     setToast(hints[Math.floor(Math.random() * hints.length)]);
   }
 
-  // Block letter click if not unlocked
   if (letterBtn) {
     letterBtn.addEventListener("click", (e) => {
       if (!unlocked) {
@@ -206,7 +206,6 @@ function initGame() {
     });
   }
 
-  // ✅ This is what makes the game buttons work
   buttonGrid.addEventListener("click", (e) => {
     const btn = e.target.closest(".game-btn");
     if (!btn) return;
@@ -220,9 +219,6 @@ function initGame() {
   setToast(`Pick a button, ${HIS_NAME} 😌`);
 }
 
-function init() {
-  initGame();
-  initMusic();
-}
-
-init();
+/* Run */
+initGame();
+initMusic();

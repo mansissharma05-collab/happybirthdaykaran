@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Game</title>
+    <title>Kammo’s Birthday — Game</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     <header class="topbar">
       <div class="brand">
         <span class="dot"></span>
-        <span class="brand-text">Birthday Surprise</span>
+        <span class="brand-text">Kammo’s Birthday</span>
       </div>
       <nav class="nav">
         <a class="active" href="./index.html">Game</a>
@@ -29,20 +29,22 @@
       <section class="hero">
         <div class="hero-content">
           <p class="kicker">Happy Birthday, <span class="accent" id="hisName">Karan</span></p>
+
           <h1>
             I made you a game.
             <br />
             Try to win it.
           </h1>
+
           <p class="sub">
-            Spoiler: you can’t 😌
+            Spoiler: you can’t. 😌
             <br />
             But you can try as many times as you want.
           </p>
 
           <div class="mini-note">
             <span class="pill">Built with love</span>
-            <span class="pill">Built for chaos</span>
+            <span class="pill">Built to frustrate you</span>
             <span class="pill">Both can be true</span>
           </div>
         </div>
@@ -61,36 +63,36 @@
             <div class="stat-label">Win Rate</div>
           </div>
           <div class="divider"></div>
-          <p class="small">Fail enough times to unlock the letter 💌</p>
+          <p class="small">Fail enough times to unlock the letter 😌</p>
         </div>
       </section>
 
       <section class="section">
         <div class="section-head">
-          <h2>🎮 The Impossible Game</h2>
-          <p class="muted">Pick the correct button (you won’t).</p>
+          <h2>🎮 The Impossible Birthday Game</h2>
+          <p class="muted">Pick the correct button to win. (You won’t.)</p>
         </div>
 
         <div class="game-wrap">
           <div class="game-panel">
             <div class="prompt">
-              <h3>Pick the correct button</h3>
-              <p class="muted">I’m watching. Don’t embarrass yourself.</p>
+              <h3>Choose the correct button</h3>
+              <p class="muted">Tip: You’re absolutely not going to.</p>
             </div>
 
             <div class="btn-grid" id="buttonGrid">
-              <button class="game-btn">THIS ONE ✅</button>
-              <button class="game-btn">NO THIS ONE</button>
-              <button class="game-btn">TRUST ME</button>
-              <button class="game-btn">LAST CHANCE</button>
+              <button class="game-btn" data-choice="A">THIS ONE ✅</button>
+              <button class="game-btn" data-choice="B">NO THIS ONE</button>
+              <button class="game-btn" data-choice="C">TRUST ME</button>
+              <button class="game-btn" data-choice="D">LAST CHANCE</button>
             </div>
 
             <div class="game-footer">
               <div class="toast" id="toast" aria-live="polite"></div>
-
               <div class="row">
-                <button class="btn primary" id="resetBtn" type="button">Reset</button>
+                <button class="btn primary" id="resetBtn" type="button">Reset (coward)</button>
                 <button class="btn ghost" id="cheatBtn" type="button">"Hint"</button>
+                <a class="btn ghost" href="./letter.html">Go to Letter</a>
                 <a class="btn ghost" href="./music.html">Go to Music</a>
               </div>
             </div>
@@ -98,27 +100,33 @@
 
           <aside class="side-panel">
             <div class="card">
-              <h4>Unlock status</h4>
-              <div class="unlock">
-                <div class="unlock-bar"><div id="unlockFill"></div></div>
-                <p class="muted" id="unlockMsg">Suffering meter: 0%</p>
-
-                <a class="btn primary disabled" id="letterBtn" href="./letter.html" aria-disabled="true">
-                  Unlock Letter
-                </a>
-              </div>
+              <h4>Rules</h4>
+              <ol class="rules">
+                <li>Click a button.</li>
+                <li>Lose.</li>
+                <li>Repeat.</li>
+              </ol>
             </div>
 
             <div class="card">
               <h4>Taunts</h4>
               <p class="muted" id="tauntText">You look confident. That’s adorable.</p>
             </div>
+
+            <div class="card">
+              <h4>Unlock status</h4>
+              <div class="unlock">
+                <div class="unlock-bar"><div id="unlockFill"></div></div>
+                <p class="muted" id="unlockMsg">Suffering meter: 0%</p>
+                <a class="btn primary disabled" id="letterBtn" href="./letter.html" aria-disabled="true">Unlock Letter</a>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
 
       <footer class="footer">
-        <p class="muted">Made by Mansi • Happy Birthday 🎂</p>
+        <p class="muted">Made by Mansi • For Kammo • Happy Birthday 🎂</p>
       </footer>
     </main>
 

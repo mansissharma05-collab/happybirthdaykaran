@@ -1,75 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Letter</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<body onload="showLetter()">
+  <div class="container">
+    <h1 class="title">Your Letter ✉️</h1>
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+    <!-- LOCKED VIEW -->
+    <div id="lockedView" class="card">
+      <p class="subtitle">Enter the password to unlock your letter:</p>
+      <input class="input" id="password" type="password" placeholder="Password..." />
+      <button class="btn" onclick="unlockLetter()">Unlock</button>
+    </div>
 
-  <body>
-    <header class="topbar">
-      <div class="brand">
-        <span class="dot"></span>
-        <span class="brand-text">Birthday Surprise</span>
-      </div>
-      <nav class="nav">
-        <a href="./index.html">Game</a>
-        <a class="active" href="./letter.html">Letter</a>
-        <a href="./music.html">Music</a>
-      </nav>
-    </header>
+    <!-- LETTER VIEW -->
+    <div id="letterView" class="card letter-card" style="display:none;">
+      <h2 class="small-title">Karan,</h2>
 
-    <main>
-      <section class="section">
-        <div class="section-head">
-          <h2>💌 The Letter</h2>
-          <p class="muted">Unlocked only after you fail enough 😌</p>
-        </div>
+      <p class="letter-text">
+        <b>Happy Birthday.</b><br><br>
 
-        <div class="letter">
-          <div class="letter-card">
-            <h3>Dear Birthday Boy,</h3>
+        It’s crazy to think it’s been a year of knowing you, with all the insane back and forth, the fights, the tears, and all the happy moments in between. And honestly… I’m still grateful it was you.<br><br>
 
-            <div class="placeholder">
-              <p><strong>Paste your letter here later.</strong></p>
-              <p class="muted">You can write anything sweet + flirty here.</p>
-            </div>
+        Today I just want you to know how grateful I am that we matched back in November. Even if it started out as just a dating app, it’s always felt like it was meant to happen.<br><br>
 
-            <div class="sig">— Mansi</div>
+        I’m really glad you’re in my life. You’ll always be someone special to me.<br><br>
 
-            <div class="row" style="margin-top:14px">
-              <a class="btn ghost" href="./index.html">Back to game</a>
-              <a class="btn primary" href="./music.html">Go to music 🎶</a>
-            </div>
-          </div>
+        I hope this year brings you peace, happiness, and everything you’ve been working for.<br><br>
 
-          <!-- This overlay hides the letter if locked -->
-          <div class="locked" id="lockedOverlay">
-            <div class="locked-inner">
-              <div class="lock">🔒</div>
-              <h3>Locked</h3>
-              <p class="muted">
-                Not yet babe.
-                <br />
-                Go lose the game first 😌
-              </p>
-              <a class="btn primary" href="./index.html">Go to game</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        - Mansi
+      </p>
 
-      <footer class="footer">
-        <p class="muted">Made by Mansi • Happy Birthday 🎂</p>
-      </footer>
-    </main>
+      <!-- ✅ Button to music page -->
+      <a class="btn" href="music.html">Go to Music Page 🎶</a>
+    </div>
 
-    <script src="./script.js"></script>
-  </body>
+    <div class="nav">
+      <a class="link" href="index.html">← Back to Home</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

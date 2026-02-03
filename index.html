@@ -1,123 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Game</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Karan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <div class="container">
+    <h1 class="title">Happy Birthday, Karan 🤍</h1>
+    <p class="subtitle">
+      This is a tiny little birthday corner made just for you.
+    </p>
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
+    <div class="card">
+      <p>Click below to open your birthday letter ✨</p>
+      <a class="btn" href="letter.html">Open Letter</a>
+    </div>
 
-  <body>
-    <header class="topbar">
-      <div class="brand">
-        <span class="dot"></span>
-        <span class="brand-text">Birthday Surprise</span>
-      </div>
-      <nav class="nav">
-        <a class="active" href="./index.html">Game</a>
-        <a href="./letter.html">Letter</a>
-        <a href="./music.html">Music</a>
-      </nav>
-    </header>
+    <div class="nav">
+      <a class="link" href="music.html">Go to Music Page →</a>
+    </div>
+  </div>
 
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <p class="kicker">Happy Birthday, <span class="accent" id="hisName">Karan</span></p>
-          <h1>
-            I made you a game.
-            <br />
-            Try to win it.
-          </h1>
-          <p class="sub">Spoiler: you can’t 😌</p>
-
-          <div class="mini-note">
-            <span class="pill">Built with love</span>
-            <span class="pill">Built for chaos</span>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="stat">
-            <div class="stat-num" id="attempts">0</div>
-            <div class="stat-label">Attempts</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num" id="streak">0</div>
-            <div class="stat-label">Confidence Level</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num" id="winrate">0%</div>
-            <div class="stat-label">Win Rate</div>
-          </div>
-          <div class="divider"></div>
-          <p class="small">Fail enough times to unlock the letter 💌</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <h2>🎮 The Impossible Game</h2>
-          <p class="muted">Choose the correct button (you won’t).</p>
-        </div>
-
-        <div class="game-wrap">
-          <div class="game-panel">
-            <div class="prompt">
-              <h3>Pick the correct button</h3>
-              <p class="muted">I’m watching. Don’t embarrass yourself.</p>
-            </div>
-
-            <div class="btn-grid" id="buttonGrid">
-              <button class="game-btn">THIS ONE ✅</button>
-              <button class="game-btn">NO THIS ONE</button>
-              <button class="game-btn">TRUST ME</button>
-              <button class="game-btn">LAST CHANCE</button>
-            </div>
-
-            <div class="game-footer">
-              <div class="toast" id="toast" aria-live="polite"></div>
-
-              <div class="row">
-                <button class="btn primary" id="resetBtn" type="button">Reset</button>
-                <button class="btn ghost" id="cheatBtn" type="button">"Hint"</button>
-                <a class="btn ghost" href="./music.html">Go to Music</a>
-              </div>
-            </div>
-          </div>
-
-          <aside class="side-panel">
-            <div class="card">
-              <h4>Unlock status</h4>
-              <div class="unlock">
-                <div class="unlock-bar"><div id="unlockFill"></div></div>
-                <p class="muted" id="unlockMsg">Suffering meter: 0%</p>
-
-                <!-- IMPORTANT: goes to letter.html -->
-                <a class="btn primary disabled" id="letterBtn" href="./letter.html" aria-disabled="true">
-                  Unlock Letter
-                </a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h4>Taunts</h4>
-              <p class="muted" id="tauntText">You look confident. That’s adorable.</p>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <p class="muted">Made by Mansi • Happy Birthday 🎂</p>
-      </footer>
-    </main>
-
-    <script src="./script.js"></script>
-  </body>
+</body>
 </html>

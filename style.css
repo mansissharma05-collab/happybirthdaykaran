@@ -411,3 +411,26 @@ h1{
   .game-wrap{ grid-template-columns: 1fr; }
   .music-grid{ grid-template-columns: 1fr; }
 }
+/* ================================
+   FIX: MUSIC PAGE spacing (FINAL)
+   ================================ */
+
+.music-card{
+  padding: 32px !important;
+}
+
+.music-card h3,
+.music-card p{
+  margin-top: 0 !important;
+}
+
+.music-card .songs{
+  padding-left: 22px !important;
+  padding-right: 16px !important;
+  margin-top: 14px !important;
+}
+
+.music-card .songs li{
+  line-height: 1.7 !important;
+  margin-bottom: 12px !important;
+}
